@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -18,5 +19,8 @@ public class Main {
         //Actor actor=context.getBean("actor", Actor.class);
         //System.out.println(movie1==movie);
         System.out.println(movie1);
+        BeanLifecycleDemoBean beanLifecycleDemoBean=context.getBean(BeanLifecycleDemoBean.class);
+        context.registerShutdownHook();
+
     }
 }

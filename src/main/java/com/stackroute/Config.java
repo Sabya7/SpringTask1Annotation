@@ -48,4 +48,5 @@ public class Config {
         Movie movie =new Movie(actorPaku());
         return movie;
     }
+
 }
