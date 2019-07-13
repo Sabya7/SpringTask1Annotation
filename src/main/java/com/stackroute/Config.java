@@ -35,11 +35,17 @@ public class Config {
         Actor actor=new Actor("Paku","Male",21);
         return actor;
     }
-    @Bean({"movieA","movieB"})
+    /*@Bean({"movieA","movieB"})
     @Scope("prototype")
     public Movie movie()
     {
         Movie movie =new Movie(actor());
+        return movie;
+    }*/
+    @Bean
+    public Movie movie1()
+    {
+        Movie movie =new Movie(actorPaku());
         return movie;
     }
 }
